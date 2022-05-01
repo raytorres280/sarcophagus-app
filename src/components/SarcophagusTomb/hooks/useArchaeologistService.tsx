@@ -60,6 +60,7 @@ const useArchaeologistService = (
       const getArweaveMiningStatus = async () => {
         try {
           const Arweave = initArweave();
+          // move this up to config for handling loom local?
           const arweaveResponse = await Arweave.api.get(`tx/${AssetId}`);
           switch (arweaveResponse.status) {
             case 202:

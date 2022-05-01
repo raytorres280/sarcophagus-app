@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { SarcophagusContract } from "../BlockChain/types/contract.interfaces";
 import { Archaeologist } from "./archaeologist.interfaces";
 
+//TODO: typo
 const useArcheologists = (sarcophagusContract: SarcophagusContract) => {
   const [archaeologists, setArchaeologists] = useState<Archaeologist[]>([]);
 

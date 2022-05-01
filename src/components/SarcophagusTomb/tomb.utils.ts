@@ -4,10 +4,12 @@ import { BigNumber } from "@ethersproject/bignumber";
 import { SarcophagusStatus } from "../../types/sarcophagusTomb";
 
 export const initArweave = () => {
+  // TODO: would be nice to move more of this into .env file so that can configure for local
+  // arweave node
   return Arweave.init({
-    host: "arweave.net", // Hostname or IP address for a Arweave host
-    port: 443, // Port
-    protocol: "https", // Network protocol http or https
+    host: "localhost", // Hostname or IP address for a Arweave host
+    port: 8000, // Port
+    protocol: "http", // Network protocol http or https
     timeout: 20000, // Network request timeouts in milliseconds
     logging: false, // Enable network request logging
   });

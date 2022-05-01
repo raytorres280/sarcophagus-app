@@ -7,7 +7,8 @@ import SarcoTokenABI from './artifacts/SarcoToken.abi.json'
 import { SarcophagusContract, SarcophagusTokenContract } from './types/contract.interfaces'
 
 const useSarcophagusContract = () => {
-  const { chainId, signerOrProvider } = useWeb3()
+  const web3 = useWeb3()
+  const { chainId, signerOrProvider } = web3
   const { moduleMap } = useAddresses(chainId)
   const [sarcophagusContract, setSarcophagusContract] = useState<SarcophagusContract | undefined>(undefined)
 
